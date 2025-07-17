@@ -1,9 +1,15 @@
+#!groovy
+
 pipeline {
 
     agent any
 
+    triggers {
+        cron('0 9 * * 1-5')
+    }
+
     tools {
-            nodejs "20.19.4"
+            nodejs "16.11.1"
         }
 
     stages {
