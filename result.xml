@@ -1,0 +1,222 @@
+<testsuites id="" name="" tests="4" failures="3" skipped="0" errors="0" time="4.599464">
+<testsuite name="APITests.spec.js" timestamp="2025-07-17T15:53:36.780Z" hostname="chromium" tests="4" failures="3" skipped="0" time="1.074" errors="0">
+<testcase name="Get users" classname="APITests.spec.js" time="0.152">
+<system-out>
+<![CDATA[{
+  page: [33m2[39m,
+  per_page: [33m6[39m,
+  total: [33m12[39m,
+  total_pages: [33m2[39m,
+  data: [
+    {
+      id: [33m7[39m,
+      email: [32m'michael.lawson@reqres.in'[39m,
+      first_name: [32m'Michael'[39m,
+      last_name: [32m'Lawson'[39m,
+      avatar: [32m'https://reqres.in/img/faces/7-image.jpg'[39m
+    },
+    {
+      id: [33m8[39m,
+      email: [32m'lindsay.ferguson@reqres.in'[39m,
+      first_name: [32m'Lindsay'[39m,
+      last_name: [32m'Ferguson'[39m,
+      avatar: [32m'https://reqres.in/img/faces/8-image.jpg'[39m
+    },
+    {
+      id: [33m9[39m,
+      email: [32m'tobias.funke@reqres.in'[39m,
+      first_name: [32m'Tobias'[39m,
+      last_name: [32m'Funke'[39m,
+      avatar: [32m'https://reqres.in/img/faces/9-image.jpg'[39m
+    },
+    {
+      id: [33m10[39m,
+      email: [32m'byron.fields@reqres.in'[39m,
+      first_name: [32m'Byron'[39m,
+      last_name: [32m'Fields'[39m,
+      avatar: [32m'https://reqres.in/img/faces/10-image.jpg'[39m
+    },
+    {
+      id: [33m11[39m,
+      email: [32m'george.edwards@reqres.in'[39m,
+      first_name: [32m'George'[39m,
+      last_name: [32m'Edwards'[39m,
+      avatar: [32m'https://reqres.in/img/faces/11-image.jpg'[39m
+    },
+    {
+      id: [33m12[39m,
+      email: [32m'rachel.howell@reqres.in'[39m,
+      first_name: [32m'Rachel'[39m,
+      last_name: [32m'Howell'[39m,
+      avatar: [32m'https://reqres.in/img/faces/12-image.jpg'[39m
+    }
+  ],
+  support: {
+    url: [32m'https://contentcaddy.io?utm_source=reqres&utm_medium=json&utm_campaign=referral'[39m,
+    text: [32m'Tired of writing endless social media content? Let Content Caddy generate it for you.'[39m
+  }
+}
+]]>
+</system-out>
+</testcase>
+<testcase name="Create user" classname="APITests.spec.js" time="0.264">
+<failure message="APITests.spec.js:11:1 Create user" type="FAILURE">
+<![CDATA[  [chromium] › APITests.spec.js:11:1 › Create user ─────────────────────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 201
+    Received: 401
+
+      21 |         });
+      22 |         console.log(await response.json());
+    > 23 |         expect(response.status()).toBe(201);
+         |                                   ^
+      24 |         var res = await response.json();
+      25 |         res.id;
+      26 |         console.log("User created successfully with user id: " + res.id);
+        at /Users/PlaywrightAutomation/tests/APITests.spec.js:23:35
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 201
+    Received: 401
+
+      21 |         });
+      22 |         console.log(await response.json());
+    > 23 |         expect(response.status()).toBe(201);
+         |                                   ^
+      24 |         var res = await response.json();
+      25 |         res.id;
+      26 |         console.log("User created successfully with user id: " + res.id);
+        at /Users/PlaywrightAutomation/tests/APITests.spec.js:23:35
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../test-results/APITests-Create-user-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace ../test-results/APITests-Create-user-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[{
+  error: [32m'Missing API key.'[39m,
+  how_to_get_one: [32m'https://reqres.in/signup'[39m
+}
+{
+  error: [32m'Missing API key.'[39m,
+  how_to_get_one: [32m'https://reqres.in/signup'[39m
+}
+
+[[ATTACHMENT|test-results/APITests-Create-user-chromium-retry1/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Update user" classname="APITests.spec.js" time="0.337">
+<failure message="APITests.spec.js:29:1 Update user" type="FAILURE">
+<![CDATA[  [chromium] › APITests.spec.js:29:1 › Update user ─────────────────────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 401
+
+      39 |         });
+      40 |         console.log(await response.json());
+    > 41 |         expect(response.status()).toBe(200);
+         |                                   ^
+      42 |         var res = await response.json();
+      43 |         res.name;
+      44 |         console.log("User updated successfully for user name: " + res.name);
+        at /Users/PlaywrightAutomation/tests/APITests.spec.js:41:35
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 401
+
+      39 |         });
+      40 |         console.log(await response.json());
+    > 41 |         expect(response.status()).toBe(200);
+         |                                   ^
+      42 |         var res = await response.json();
+      43 |         res.name;
+      44 |         console.log("User updated successfully for user name: " + res.name);
+        at /Users/PlaywrightAutomation/tests/APITests.spec.js:41:35
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../test-results/APITests-Update-user-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace ../test-results/APITests-Update-user-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[{
+  error: [32m'Missing API key.'[39m,
+  how_to_get_one: [32m'https://reqres.in/signup'[39m
+}
+{
+  error: [32m'Missing API key.'[39m,
+  how_to_get_one: [32m'https://reqres.in/signup'[39m
+}
+
+[[ATTACHMENT|test-results/APITests-Update-user-chromium-retry1/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Delete user" classname="APITests.spec.js" time="0.321">
+<failure message="APITests.spec.js:47:1 Delete user" type="FAILURE">
+<![CDATA[  [chromium] › APITests.spec.js:47:1 › Delete user ─────────────────────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 204
+    Received: 401
+
+      47 | test("Delete user", async ({request}) => {
+      48 |     const response = await request.delete('https://reqres.in/api/users/' + userid);
+    > 49 |     expect(response.status()).toBe(204);
+         |                               ^
+      50 | })
+        at /Users/PlaywrightAutomation/tests/APITests.spec.js:49:31
+
+    Retry #1 ───────────────────────────────────────────────────────────────────────────────────────
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 204
+    Received: 401
+
+      47 | test("Delete user", async ({request}) => {
+      48 |     const response = await request.delete('https://reqres.in/api/users/' + userid);
+    > 49 |     expect(response.status()).toBe(204);
+         |                               ^
+      50 | })
+        at /Users/PlaywrightAutomation/tests/APITests.spec.js:49:31
+
+    attachment #1: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../test-results/APITests-Delete-user-chromium-retry1/trace.zip
+    Usage:
+
+        npx playwright show-trace ../test-results/APITests-Delete-user-chromium-retry1/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results/APITests-Delete-user-chromium-retry1/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>
